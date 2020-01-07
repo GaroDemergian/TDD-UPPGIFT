@@ -3,41 +3,41 @@
 * 
 * author: Garo Demergian
 * created: 2020-01-06
-* notes: 
-* 
+* porpose: The porpose of this programe is to calculate circumference, area and/or
+*   volume of a square, rectangle or cube. The user input values and the program 
+*   will calculate and print out the result to the screen.
 * 
 * ver: 2020-01-06 first version
 * 
 * **********************************/
 
 #include <iostream>
-#include <fstream>
-#include <string>
 #include "functions.h"
 
 using namespace std;
 
 int main()
 {
-    int circumference = 0;
-    int area = 0;
-    int volume = 0;
-    int choice = 0;
+    bool status = true;
 
-    while (true)
+    while (status)
     {
+        double circumference = 0;
+        double area = 0;
+        double volume = 0;
+        int choice = 0;
+
         welcomeMSG();
-        choice = getAndValidateChoice(2);
+        choice = getAndValidateChoice(2); // 2 valid choices. 1 or 2
 
         if (choice == 1)
         {
-            choice = 0;
             cout << "What would you like to calculate? " << endl;
             cout << "Press 1 for circumference" << endl;
             cout << "Press 2 for area" << endl;
             cout << endl;
 
-            choice = getAndValidateChoice(2);
+            choice = getAndValidateChoice(2); // 2 valid choices. 1 or 2
 
             switch (choice)
             {
@@ -52,8 +52,7 @@ int main()
                 break;
 
             default:
-                cout << "Not a valid input!" << endl;
-                cout << endl;
+                // The programe should never get here.
                 break;
             }
         }
@@ -66,7 +65,7 @@ int main()
             cout << "Press 3 for volume" << endl;
             cout << endl;
 
-            choice = getAndValidateChoice(3);
+            choice = getAndValidateChoice(3); // 3 valid choices. 1, 2 or 3.
 
             switch (choice)
             {
@@ -86,16 +85,24 @@ int main()
                 break;
 
             default:
+                // The programe should never get here.
                 break;
             }
         }
         else
         {
+            //The program should never get here
             cout << "Not a valid choice" << endl;
             cout << endl;
         }
+
+        cout << "Press 1 to terminate the program or 2 to make a new calculation" << endl;
+        cout << endl;
+        if (getAndValidateChoice(2) == 1)
+        {
+            status = false;
+        }
     }
 
-    //The program should never get here!
     return 0;
 }
