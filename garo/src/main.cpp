@@ -12,9 +12,7 @@
 * **********************************/
 
 #include <iostream>
-#include "functions.h"
-
-using namespace std;
+#include "CalculatorFunctions.h"
 
 int main()
 {
@@ -22,9 +20,12 @@ int main()
 
     while (status)
     {
-        double circumference = 0;
-        double area = 0;
-        double volume = 0;
+        int circumference = 0;
+        int area = 0;
+        int volume = 0;
+        int first = 0;
+        int second = 0;
+        int third = 0;
         int choice = 0;
 
         welcomeMSG();
@@ -32,23 +33,27 @@ int main()
 
         if (choice == 1)
         {
-            cout << "What would you like to calculate? " << endl;
-            cout << "Press 1 for circumference" << endl;
-            cout << "Press 2 for area" << endl;
-            cout << endl;
+            std::cout << "What would you like to calculate? " << std::endl;
+            std::cout << "Press 1 for circumference" << std::endl;
+            std::cout << "Press 2 for area" << std::endl;
+            std::cout << std::endl;
 
             choice = getAndValidateChoice(2); // 2 valid choices. 1 or 2
 
             switch (choice)
             {
             case 1:
-                circumference = getCircumference();
-                cout << "circumference: " << circumference << endl;
+                first = getFirstEdge();
+                second = getSecondEdge();
+                circumference = getCircumference(first, second);
+                std::cout << "circumference: " << circumference << std::endl;
                 break;
 
             case 2:
-                area = getArea();
-                cout << "area: " << area << endl;
+                first = getFirstEdge();
+                second = getSecondEdge();
+                area = getArea(first, second);
+                std::cout << "area: " << area << std::endl;
                 break;
 
             default:
@@ -59,29 +64,36 @@ int main()
         else if (choice == 2)
         {
             choice = 0;
-            cout << "What would you like to calculate? " << endl;
-            cout << "Press 1 for circumference" << endl;
-            cout << "Press 2 for area" << endl;
-            cout << "Press 3 for volume" << endl;
-            cout << endl;
+            std::cout << "What would you like to calculate? " << std::endl;
+            std::cout << "Press 1 for circumference" << std::endl;
+            std::cout << "Press 2 for area" << std::endl;
+            std::cout << "Press 3 for volume" << std::endl;
+            std::cout << std::endl;
 
             choice = getAndValidateChoice(3); // 3 valid choices. 1, 2 or 3.
 
             switch (choice)
             {
             case 1:
-                circumference = getCircumference();
-                cout << "circumference: " << circumference << endl;
+                first = getFirstEdge();
+                second = getSecondEdge();
+                circumference = getCircumference(first, second);
+                std::cout << "circumference: " << circumference << std::endl;
                 break;
 
             case 2:
-                area = getArea();
-                cout << "area: " << area << endl;
+                first = getFirstEdge();
+                second = getSecondEdge();
+                area = getArea(first, second);
+                std::cout << "area: " << area << std::endl;
                 break;
 
             case 3:
-                volume = getVolume();
-                cout << "volume: " << volume << endl;
+                first = getFirstEdge();
+                second = getSecondEdge();
+                third = getHeight();
+                volume = getVolume(first, second, third);
+                std::cout << "volume: " << volume << std::endl;
                 break;
 
             default:
@@ -92,12 +104,12 @@ int main()
         else
         {
             //The program should never get here
-            cout << "Not a valid choice" << endl;
-            cout << endl;
+            std::cout << "Not a valid choice" << std::endl;
+            std::cout << std::endl;
         }
 
-        cout << "Press 1 to terminate the program or 2 to make a new calculation" << endl;
-        cout << endl;
+        std::cout << "Press 1 to terminate the program or 2 to make a new calculation" << std::endl;
+        std::cout << std::endl;
         if (getAndValidateChoice(2) == 1)
         {
             status = false;
