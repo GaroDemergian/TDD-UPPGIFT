@@ -48,7 +48,7 @@ NC = \033[1;0m
 
 INC_DIRS=-Isrc -I$(UNITY_ROOT)/src -I$(UNITY_ROOT)/extras/fixture/src
 
-.PHONY: all clean test
+.PHONY: all clean test prog
 all: clean test
 test:
 	$(CPP_COMPILER) -x c $(INC_DIRS) -x c++ $(SRC_FILES1) -o $(TARGET1)

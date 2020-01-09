@@ -16,16 +16,16 @@ void welcomeMSG()
 {
     std::cout << std::endl;
     std::cout << std::endl;
-    std::cout << "**********************************" << std::endl;
-    std::cout << "*                                *" << std::endl;
-    std::cout << "*            SmartASS            *" << std::endl;
-    std::cout << "*           Calculator           *" << std::endl;
-    std::cout << "*                                *" << std::endl;
-    std::cout << "**********************************" << std::endl;
+    std::cout << RED << "**********************************" << std::endl;
+    std::cout << RED << "*                                *" << std::endl;
+    std::cout << RED << "*            " << RESET << "SmartASS            " << RED << "*" << std::endl;
+    std::cout << RED << "*           " << RESET << "Calculator           " << RED << "*" << std::endl;
+    std::cout << RED << "*                                *" << std::endl;
+    std::cout << RED << "**********************************" << RESET << std::endl;
     std::cout << std::endl;
-    std::cout << "What would you like to calculate? " << std::endl;
-    std::cout << "Press 1 for square or rectangle" << std::endl;
-    std::cout << "Press 2 for cube or cuboid" << std::endl;
+    std::cout << "What would you like to calculate?" << std::endl;
+    std::cout << "Press " << WHITE << "1 " << RESET << "for square or rectangle" << std::endl;
+    std::cout << "Press " << WHITE << "2 " << RESET << "for cube or cuboid" << std::endl;
     std::cout << std::endl;
 }
 
@@ -50,7 +50,7 @@ int getAndValidateInput()
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //empty input stream
 
         if (!valid)
-            std::cout << "this input is invalid\n";
+            std::cout << YELLOW << "this input is invalid\n" << RESET;
     }
     return input;
 }
@@ -76,7 +76,7 @@ int getAndValidateChoice(int validNumber)
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //empty input stream
 
         if (!valid)
-            std::cout << "this input is invalid\n";
+            std::cout << YELLOW << "this input is invalid\n" << RESET;
     }
     return input;
 }
@@ -108,7 +108,7 @@ int getFirstEdge()
 {
     int edge;
     std::cout << "Please enter the length of the first edge! " << std::endl;
-    std::cout << "Valid input is between 1 and 999" << std::endl;
+    std::cout << "Valid input: " << WHITE << "1 " << RESET << "to " << WHITE << "999 " << RESET << std::endl;
     std::cout << std::endl;
     edge = getAndValidateInput();
     std::cout << std::endl;
@@ -121,7 +121,7 @@ int getSecondEdge()
 {
     int edge;
     std::cout << "Please enter the length of the second edge! " << std::endl;
-    std::cout << "Valid input is between 1 and 999" << std::endl;
+    std::cout << "Valid input: " << WHITE << "1 " << RESET << "to " << WHITE << "999 " << RESET << std::endl;
     std::cout << std::endl;
     edge = getAndValidateInput();
     std::cout << std::endl;
@@ -134,7 +134,7 @@ int getHeight()
 {
     int edge;
     std::cout << "Please enter the height of the third edge! " << std::endl;
-    std::cout << "Valid input is between 1 and 999" << std::endl;
+    std::cout << "Valid input: " << WHITE << "1 " << RESET << "to " << WHITE << "999 " << RESET << std::endl;
     std::cout << std::endl;
     edge = getAndValidateInput();
     std::cout << std::endl;

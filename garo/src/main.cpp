@@ -32,8 +32,8 @@ int main()
         if (choice == 1)
         {
             std::cout << "What would you like to calculate? " << std::endl;
-            std::cout << "Press 1 for circumference" << std::endl;
-            std::cout << "Press 2 for area" << std::endl;
+            std::cout << "Press " << WHITE << "1 " << RESET << "for circumference" << std::endl;
+            std::cout << "Press " << WHITE << "2 " << RESET << "for area" << std::endl;
             std::cout << std::endl;
 
             choice = getAndValidateChoice(2); // 2 valid choices. 1 or 2
@@ -44,14 +44,14 @@ int main()
                 first = getFirstEdge();
                 second = getSecondEdge();
                 circumference = getCircumference(first, second);
-                std::cout << "circumference: " << circumference << std::endl;
+                std::cout << BLUE << "circumference: " << WHITE << circumference << RESET << std::endl;
                 break;
 
             case 2:
                 first = getFirstEdge();
                 second = getSecondEdge();
                 area = getArea(first, second);
-                std::cout << "area: " << area << std::endl;
+                std::cout << BLUE << "area: " << WHITE << area << RESET << std::endl;
                 break;
 
             default:
@@ -63,9 +63,9 @@ int main()
         {
             choice = 0;
             std::cout << "What would you like to calculate? " << std::endl;
-            std::cout << "Press 1 for circumference" << std::endl;
-            std::cout << "Press 2 for area" << std::endl;
-            std::cout << "Press 3 for volume" << std::endl;
+            std::cout << "Press " << WHITE << "1 " << RESET << "for circumference" << std::endl;
+            std::cout << "Press " << WHITE << "2 " << RESET << "for area" << std::endl;
+            std::cout << "Press " << WHITE << "3 " << RESET << "for volume" << std::endl;
             std::cout << std::endl;
 
             choice = getAndValidateChoice(3); // 3 valid choices. 1, 2 or 3.
@@ -76,14 +76,14 @@ int main()
                 first = getFirstEdge();
                 second = getSecondEdge();
                 circumference = getCircumference(first, second);
-                std::cout << "circumference: " << circumference << std::endl;
+                std::cout << BLUE << "circumference: " << WHITE << circumference << RESET << std::endl;
                 break;
 
             case 2:
                 first = getFirstEdge();
                 second = getSecondEdge();
                 area = getArea(first, second);
-                std::cout << "area: " << area << std::endl;
+                std::cout << BLUE << "area: " << WHITE << area << RESET << std::endl;
                 break;
 
             case 3:
@@ -91,7 +91,7 @@ int main()
                 second = getSecondEdge();
                 third = getHeight();
                 volume = getVolume(first, second, third);
-                std::cout << "volume: " << volume << std::endl;
+                std::cout << BLUE << "volume: " << WHITE << volume << RESET << std::endl;
                 break;
 
             default:
@@ -102,11 +102,13 @@ int main()
         else
         {
             //The program should never get here
-            std::cout << "Invalid choice" << std::endl;
+            std::cout << RED << "Invalid choice" << RESET << std::endl;
             std::cout << std::endl;
         }
 
-        std::cout << "Press 1 to terminate the program or 2 to make a new calculation" << std::endl;
+        std::cout << "Press " << WHITE << "1 " << RESET;
+        std::cout << "to terminate the program or ";
+        std::cout << WHITE << "2 " << RESET << " to make a new calculation" << std::endl;
         std::cout << std::endl;
         if (getAndValidateChoice(2) == 1)
         {
