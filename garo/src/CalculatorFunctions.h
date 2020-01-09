@@ -14,6 +14,8 @@
 #define YELLOW "\033[33m" /* Yellow */
 #define BLUE "\033[34m"   /* Blue */
 #define WHITE "\033[37m"  /* White */
+#define MAGENTA "\033[35m"/* Magenta */
+#define CYAN "\033[36m"   /* Cyan */
 
 void welcomeMSG();
 int getAndValidateInput();

@@ -16,12 +16,19 @@ void welcomeMSG()
 {
     std::cout << std::endl;
     std::cout << std::endl;
-    std::cout << RED << "**********************************" << std::endl;
-    std::cout << RED << "*                                *" << std::endl;
-    std::cout << RED << "*            " << RESET << "SmartASS            " << RED << "*" << std::endl;
-    std::cout << RED << "*           " << RESET << "Calculator           " << RED << "*" << std::endl;
-    std::cout << RED << "*                                *" << std::endl;
-    std::cout << RED << "**********************************" << RESET << std::endl;
+    std::cout << RED << "******************************************" << std::endl;
+    std::cout << RED << "*                                        *" << std::endl;
+    std::cout << RED << "*                " << RESET << "SmartASS                " << RED << "*" << std::endl;
+    std::cout << RED << "*               " << RESET << "Calculator               " << RED << "*" << std::endl;
+    std::cout << RED << "*                                        *" << std::endl;
+    std::cout << RED << "******************************************" << RESET << std::endl;
+    std::cout << std::endl;
+    std::cout << std::endl;
+    std::cout << MAGENTA;
+    std::cout << " * * * * * Program Instructions * * * * * " << RESET << std::endl;
+    std::cout << "Valid input is " << WHITE << "numbers " << RESET << "only" << std::endl;
+    std::cout << "Exception: numbers followed by letters or symbols." << std::endl;
+    std::cout << "In that case the program will accept the number and discard what comes after." << std::endl;
     std::cout << std::endl;
     std::cout << "What would you like to calculate?" << std::endl;
     std::cout << "Press " << WHITE << "1 " << RESET << "for square or rectangle" << std::endl;

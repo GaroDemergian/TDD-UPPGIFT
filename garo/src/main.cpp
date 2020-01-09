@@ -44,14 +44,14 @@ int main()
                 first = getFirstEdge();
                 second = getSecondEdge();
                 circumference = getCircumference(first, second);
-                std::cout << BLUE << "circumference: " << WHITE << circumference << RESET << std::endl;
+                std::cout << CYAN << "circumference: " << WHITE << circumference << RESET << std::endl;
                 break;
 
             case 2:
                 first = getFirstEdge();
                 second = getSecondEdge();
                 area = getArea(first, second);
-                std::cout << BLUE << "area: " << WHITE << area << RESET << std::endl;
+                std::cout << CYAN << "area: " << WHITE << area << RESET << std::endl;
                 break;
 
             default:
@@ -76,14 +76,14 @@ int main()
                 first = getFirstEdge();
                 second = getSecondEdge();
                 circumference = getCircumference(first, second);
-                std::cout << BLUE << "circumference: " << WHITE << circumference << RESET << std::endl;
+                std::cout << CYAN << "circumference: " << WHITE << circumference << RESET << std::endl;
                 break;
 
             case 2:
                 first = getFirstEdge();
                 second = getSecondEdge();
                 area = getArea(first, second);
-                std::cout << BLUE << "area: " << WHITE << area << RESET << std::endl;
+                std::cout << CYAN << "area: " << WHITE << area << RESET << std::endl;
                 break;
 
             case 3:
@@ -91,7 +91,7 @@ int main()
                 second = getSecondEdge();
                 third = getHeight();
                 volume = getVolume(first, second, third);
-                std::cout << BLUE << "volume: " << WHITE << volume << RESET << std::endl;
+                std::cout << CYAN << "volume: " << WHITE << volume << RESET << std::endl;
                 break;
 
             default:
