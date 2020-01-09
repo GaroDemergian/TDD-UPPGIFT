@@ -38,7 +38,7 @@ SRC_FILES1=\
 
 SRC_FILES2=\
   src/CalculatorFunctions.cpp \
-  src/main.cp  
+  src/main.cpp 
 
 RED = \033[1;31m
 GREEN = \033[1;32m

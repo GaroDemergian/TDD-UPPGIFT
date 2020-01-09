@@ -1,4 +1,4 @@
-/**********************************
+/*********************************************************************************
 * Filename: main.cpp
 * 
 * author: Garo Demergian
@@ -7,9 +7,7 @@
 *   volume of a square, rectangle or cube. The user input values and the program 
 *   will calculate and print out the result to the screen.
 * 
-* ver: 2020-01-06 first version
-* 
-* **********************************/
+*********************************************************************************/
 
 #include <iostream>
 #include "CalculatorFunctions.h"
@@ -104,7 +102,7 @@ int main()
         else
         {
             //The program should never get here
-            std::cout << "Not a valid choice" << std::endl;
+            std::cout << "Invalid choice" << std::endl;
             std::cout << std::endl;
         }
 
